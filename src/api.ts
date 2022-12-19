@@ -44,13 +44,14 @@ export function getUpcomingMovies() {
   );
 }
 
+// search api
+
 export function getSearchMovies(keyword: string) {
   return fetch(
     `${BASE_PATH}/search/movie?api_key=${API_KEY}&query=${keyword}`
   ).then((response) => response.json());
 }
 
-// search api
 export function getSearchTv(keyword: string) {
   return fetch(
     `${BASE_PATH}/search/tv?api_key=${API_KEY}&query=${keyword}`

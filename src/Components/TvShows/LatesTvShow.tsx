@@ -28,8 +28,6 @@ const offset = 6;
 function LatesTvShow() {
   const { data } = useQuery<IGetLatesTv>(['tv', 'latesTvShow'], getLatestShow);
 
-  console.log(data);
-
   const { scrollY } = useScroll();
 
   const history = useHistory();
