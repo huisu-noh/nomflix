@@ -18,7 +18,6 @@ import {
   BigTitle,
   BigOverview,
   rowVariants,
-  infoVariants,
   boxVariants,
 } from '../Style';
 import { makeImagePath } from '../../utils';
@@ -109,14 +108,7 @@ function LatesTvShow() {
             >
               {clickedTvShow && (
                 <>
-                  <BigCover
-                    style={{
-                      backgroundImage: `linear-gradient(to top, black, transparent), url(${makeImagePath(
-                        data.backdrop_path,
-                        'w500'
-                      )})`,
-                    }}
-                  />
+                  <BigCover bgPhoto={makeImagePath(data.poster_path || '')} />
                   <BigTitle>{data.name}</BigTitle>
                   <BigOverview>{data.overview}</BigOverview>
                 </>

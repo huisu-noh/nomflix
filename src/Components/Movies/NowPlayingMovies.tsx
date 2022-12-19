@@ -2,7 +2,7 @@ import { AnimatePresence, useScroll } from 'framer-motion';
 import { useState } from 'react';
 import { AiFillCaretRight } from 'react-icons/ai';
 import { useQuery } from 'react-query';
-import { useHistory, useLocation, useRouteMatch } from 'react-router-dom';
+import { useHistory, useRouteMatch } from 'react-router-dom';
 import { getMovies, IGetMoviesResult } from '../../api';
 import {
   SliderTitle,
@@ -115,12 +115,7 @@ function NowPlayingMovies() {
               {clickedMovie && (
                 <>
                   <BigCover
-                    style={{
-                      backgroundImage: `linear-gradient(to top, black, transparent), url(${makeImagePath(
-                        clickedMovie.backdrop_path,
-                        'w500'
-                      )})`,
-                    }}
+                    bgPhoto={makeImagePath(clickedMovie.poster_path || '')}
                   />
                   <BigTitle>{clickedMovie.title}</BigTitle>
                   <BigOverview>{clickedMovie.overview}</BigOverview>

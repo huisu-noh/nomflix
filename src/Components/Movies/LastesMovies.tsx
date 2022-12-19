@@ -113,12 +113,7 @@ function LastesMovies() {
               {clickedMovie && (
                 <>
                   <BigCover
-                    style={{
-                      backgroundImage: `linear-gradient(to top, black, transparent), url(${makeImagePath(
-                        clickedMovie.backdrop_path,
-                        'w500'
-                      )})`,
-                    }}
+                    bgPhoto={makeImagePath(clickedMovie.poster_path || '')}
                   />
                   <BigTitle>{clickedMovie.title}</BigTitle>
                   <BigOverview>{clickedMovie.overview}</BigOverview>

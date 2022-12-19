@@ -5,8 +5,6 @@ import { useQuery } from 'react-query';
 import { useLocation } from 'react-router-dom';
 import {
   getSearchMovies,
-  getSearchTv,
-  IGetTvResult,
   IGetMoviesResult,
 } from '../api';
 import {

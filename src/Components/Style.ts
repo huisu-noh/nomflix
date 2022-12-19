@@ -87,11 +87,15 @@ export const BigMovie = styled(motion.div)`
   background-color: ${(props) => props.theme.black.darker};
 `;
 
-export const BigCover = styled.div`
+export const BigCover = styled.div<{ bgPhoto: string }>`
+  position: absolute;
   width: 100%;
   background-size: cover;
   background-position: center center;
-  height: 400px;
+  height: 100%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)),
+    url(${(props) => props.bgPhoto});
+  background-size: cover;
 `;
 
 export const BigTitle = styled.h3`
@@ -99,13 +103,13 @@ export const BigTitle = styled.h3`
   padding: 20px;
   font-size: 40px;
   position: relative;
-  top: -50px;
+  top: 0;
 `;
 
 export const BigOverview = styled.p`
   padding: 20px;
   position: relative;
-  top: -80px;
+  top: 65%;
   color: ${(props) => props.theme.white.lighter};
 `;
 

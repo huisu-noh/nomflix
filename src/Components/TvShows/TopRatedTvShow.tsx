@@ -111,13 +111,9 @@ function TopRatedTvShow() {
               {clickedTvShow && (
                 <>
                   <BigCover
-                    style={{
-                      backgroundImage: `linear-gradient(to top, black, transparent), url(${makeImagePath(
-                        clickedTvShow.backdrop_path,
-                        'w500'
-                      )})`,
-                    }}
+                    bgPhoto={makeImagePath(clickedTvShow.poster_path || '')}
                   />
+
                   <BigTitle>{clickedTvShow.name}</BigTitle>
                   <BigOverview>{clickedTvShow.overview}</BigOverview>
                 </>
