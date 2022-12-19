@@ -1,0 +1,10 @@
+{
+  "files": {
+    "main.js": "/huisu-noh/nomflix/static/js/main.e292cbfc.js",
+    "index.html": "/huisu-noh/nomflix/index.html",
+    "main.e292cbfc.js.map": "/huisu-noh/nomflix/static/js/main.e292cbfc.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.e292cbfc.js"
+  ]
+}
