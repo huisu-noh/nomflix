@@ -2,7 +2,7 @@ import { AnimatePresence, useScroll } from 'framer-motion';
 import { useState } from 'react';
 import { AiFillCaretRight } from 'react-icons/ai';
 import { useQuery } from 'react-query';
-import { useHistory, useRouteMatch } from 'react-router-dom';
+import { useHistory, useLocation, useRouteMatch } from 'react-router-dom';
 import { getMovies, IGetMoviesResult } from '../../api';
 import {
   SliderTitle,

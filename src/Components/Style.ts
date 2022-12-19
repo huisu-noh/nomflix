@@ -41,6 +41,7 @@ export const Box = styled(motion.div)<{ bgPhoto: string }>`
   background-size: cover;
   background-position: center center;
   font-size: 66px;
+  border-radius: 10px;
   cursor: pointer;
   &:first-child {
     transform-origin: center left;
@@ -52,10 +53,12 @@ export const Box = styled(motion.div)<{ bgPhoto: string }>`
 
 export const Info = styled(motion.div)`
   padding: 10px;
-  background-color: ${(props) => props.theme.black.lighter};
+  background-color: ${(props) => props.theme.black.darker};
   opacity: 0;
   position: absolute;
   width: 100%;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
   bottom: 0;
   h4 {
     text-align: center;
@@ -81,7 +84,7 @@ export const BigMovie = styled(motion.div)`
   margin: 0 auto;
   border-radius: 15px;
   overflow: hidden;
-  background-color: ${(props) => props.theme.black.lighter};
+  background-color: ${(props) => props.theme.black.darker};
 `;
 
 export const BigCover = styled.div`
@@ -94,9 +97,9 @@ export const BigCover = styled.div`
 export const BigTitle = styled.h3`
   color: ${(props) => props.theme.white.lighter};
   padding: 20px;
-  font-size: 46px;
+  font-size: 40px;
   position: relative;
-  top: -80px;
+  top: -50px;
 `;
 
 export const BigOverview = styled.p`
